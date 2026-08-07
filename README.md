@@ -86,6 +86,68 @@ KNN紧邻算法，本质上是在KD法更改数据结构后在新的数据结构
 
 KNN算法参考知乎：https://zhuanlan.zhihu.com/p/23966698
 
+#### 梯度下降法
+
+一个点的偏导数向量是定义域里该点上升最快的方向。
+
+<img width="906" height="251" alt="a9636d4c8775e89953d3258a3528f597" src="https://github.com/user-attachments/assets/a69db230-dc25-4e15-b37e-51f983502c4c" />
+
+- 随机梯度下降
+
+<img width="935" height="358" alt="3c623108ba53f5e16746212dfcdf1d8e" src="https://github.com/user-attachments/assets/9f633742-ca57-409e-885d-314c8774cde7" />
+
+- 批梯度下降
+
+就是总误差函数直接偏导来迭代
+
+#### 常见loss
+
+- 交叉熵：
+
+<img width="935" height="476" alt="6f5c7d8f8bb7dde5456042a8ae462dcc" src="https://github.com/user-attachments/assets/a94474ec-26ed-470d-a1b0-5d72de866ca9" />
+
+<img width="954" height="309" alt="a83c993e5703666eaa9b32a8d6cfdc5b" src="https://github.com/user-attachments/assets/631e262b-acef-44dd-b278-032e2d7ab76c" />
+
+可以联想LR逻辑回归里面求解P(y|x)所使用的极大似然法，导出的损失函数也是交叉熵
+
+- MSE
+
+均方误差容易被奇异值影响
+
+#### Adam
+
+- mini batch、batch size、Mini-Batch梯度下降
+
+- 指数加权平均
+
+<img width="944" height="360" alt="861883cb2ad2654956a11ee6e3e8fc11" src="https://github.com/user-attachments/assets/6394176b-d454-4ade-be23-13a382dbc88c" />
+
+误差纠正：
+
+<img width="1050" height="506" alt="aac4681a115892811980fdd93802157c" src="https://github.com/user-attachments/assets/e6ccf90f-513d-48c1-91e4-f8ebc04b490c" />
+
+<img width="1034" height="256" alt="c974bb278f1c747ed14d5c232ef57015" src="https://github.com/user-attachments/assets/426d35c0-9152-40fa-bcfe-b02436180e4e" />
+
+- Momentum梯度下降法（针对batch）
+
+在一个epoch中每次选择batch样本对应的损失函数进行迭代，这样的区别在于迭代方向的变化。
+比随机梯度下降稳定，比批梯度下降方便。
+
+- RMSprop（自适应控制步长即学习率）
+
+<img width="1044" height="561" alt="1bce42239013ba6de129df272c01bfb9" src="https://github.com/user-attachments/assets/6a1526f6-8491-4c96-b58a-3339d8347764" />
+
+<img width="965" height="508" alt="15ca3cf36921539d089b6b458dd300e2" src="https://github.com/user-attachments/assets/ce9ca2f4-1011-4585-a218-4d7fc671f7f0" />
+
+里面的Sdw要求是梯度平方的指数加权平均是为了刻画梯度序列的“大小”（平方代表向量长度），所以这样设计学习率是为了在梯度陡峭的时候步长缩小，梯度平缓“走不动”的时候能够加大步长。
+
+- Adam Optimizer（结合Momentum和RMSprop）
+
+<img width="921" height="580" alt="dd43fb08c56da732b674d1c435295023" src="https://github.com/user-attachments/assets/e7d133f5-9933-4539-afc9-35cbeef912c5" />
+
+<img width="946" height="674" alt="25c0d73b5c2b1b89f424df5c0741d9e8" src="https://github.com/user-attachments/assets/408eb06d-fe24-43b1-90c2-6a2dcd9e9e42" />
+
+把a/根号s看成一个整体，这是针对步长的。
 
 
 
@@ -110,9 +172,7 @@ KNN算法参考知乎：https://zhuanlan.zhihu.com/p/23966698
 
 
 
-
-
-
+《动手学深度学习》：https://zh.d2l.ai/index.html
 
 
 
