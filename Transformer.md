@@ -44,6 +44,14 @@ norm可以使训练会更加迅速
 
 - 首先对于词进行切割
 - 补上[CLS]和[SEP]，分隔两个句子
+<img width="994" height="614" alt="0f9ed258a590b73e6d69454f263ed461" src="https://github.com/user-attachments/assets/3d8bf46b-6df3-4c6e-a5d5-0a33ae7030e4" />
+
+<img width="1009" height="590" alt="5b93bf0b1d947183ae08ce65b4dc9183" src="https://github.com/user-attachments/assets/c58c0125-4be2-4afa-837c-a18148e64af3" />
+
+<img width="990" height="280" alt="0c517d4ef0d7f3c0350a453e02e0e913" src="https://github.com/user-attachments/assets/0efcd959-e15a-4c3b-82e3-4a2ea9e3e3dc" />
+
+*因为注意力矩阵的产生是受每个词的影响，很有可能其他词的出现会影响另一个词对于所有词的关联度，在多层训练的影响下，[SEP]的数值会慢慢的达到一个分隔符的作用，即让前后两个句子之间的关联度减弱*
+
 - token embedding
 - segment embedding
 
@@ -54,7 +62,7 @@ norm可以使训练会更加迅速
 #### transformer encoder
 
 #### 预训练
-
+- MLM
 
 
 
