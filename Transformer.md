@@ -62,7 +62,24 @@ norm可以使训练会更加迅速
 #### transformer encoder
 
 #### 预训练
-- MLM
+- MLM（mask language model）
+
+随即掩码的机制来调整模型参数
+
+<img width="1024" height="323" alt="d3bbd39325e0262e517aa46206c11611" src="https://github.com/user-attachments/assets/3770cb5f-cc82-44e5-95c0-0ed23cc2040b" />
+
+- NSP
+
+<img width="988" height="491" alt="f29f1a244625b1bd01b83bcad7be22c0" src="https://github.com/user-attachments/assets/51f9552f-85ea-4252-8185-461f2665f4e7" />
+
+<img width="928" height="538" alt="efe6f1cc7e359908159fca7f07b70ced" src="https://github.com/user-attachments/assets/f6ae573b-3a43-49d1-b7a7-7b2b0c27d7d7" />
+
+<img width="951" height="475" alt="90d046ae0135016270c3b969865551d3" src="https://github.com/user-attachments/assets/b365c4ff-67b0-4ed7-9fd2-60403261cb90" />
+
+
+
+
+
 
 
 
