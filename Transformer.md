@@ -35,9 +35,25 @@ norm可以使训练会更加迅速
 
 ## only-encoder DERT
 
+<img width="1085" height="775" alt="c96073254a445486ed8aed22460f9b01" src="https://github.com/user-attachments/assets/e7cd15be-2bc0-449f-873d-456749133b2a" />
+
+### embedding
 
 
+#### embedding
 
+- 首先对于词进行切割
+- 补上[CLS]和[SEP]，分隔两个句子
+- token embedding
+- segment embedding
+
+*使用位置嵌入＋句子分隔其实不能代替segment embedding，因为transformer的自注意力机制会让第二句话的字来思索它和第一句话的关系，如果第二句话很短，和第一句话关系不大，那么这就会导致这个字理解错误*
+
+- position embedding
+
+#### transformer encoder
+
+#### 预训练
 
 
 
