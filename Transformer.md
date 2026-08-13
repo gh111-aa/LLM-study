@@ -76,6 +76,32 @@ norm可以使训练会更加迅速
 
 <img width="951" height="475" alt="90d046ae0135016270c3b969865551d3" src="https://github.com/user-attachments/assets/b365c4ff-67b0-4ed7-9fd2-60403261cb90" />
 
+## only-decoder
+参考文章：https://zhuanlan.zhihu.com/p/2013748280396384023
+
+<img width="440" height="630" alt="fc2d95ee6aedf73bbe374fb132c359e3" src="https://github.com/user-attachments/assets/1a0c27c6-7787-4acc-9f74-a179729c4c59" />
+
+举一个训练集计算loss的例子：
+
+<img width="910" height="576" alt="9b0286f5c86bab920465ed922a6ebf9c" src="https://github.com/user-attachments/assets/03785106-b4c7-4c6b-8ef1-9b6e8e605b3e" />
+
+<img width="899" height="639" alt="74cadcf7785341e0e5a0782d34d8e484" src="https://github.com/user-attachments/assets/874f30ab-cc5a-4823-b1b5-8ed09f88e9b6" />
+
+为了并行计算，batch的操作可能会让语料失去连续性
+
+
+我认为Bert和Only-decoder最大的区别就是：
+
+only-decoder具有“循环”的架构，具有自回归的特点
+
+Bert没有自回归的特点，没有mask，会根据被遮挡的词两边的数据来预测中间的数据
+
+
+
+
+
+
+
 
 
 
